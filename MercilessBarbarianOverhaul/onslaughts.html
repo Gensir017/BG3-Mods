@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="divHandler.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <title>Merciless | Onslaughts</title>
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+        <script>
+            buildNavbar("Onslaughts")
+        </script>
+        <div id="pageContainer">
+        </div>
+
+        <script src="divHandler.js"></script>
+        <script>
+            // ------------Tier 1------------
+            let tier1Div = addTitle("Tier 1 Onslaughts", "tier1onslaught")
+            // Reaping Swing
+            addSkillSnippet(
+                tier1Div,
+                isNew=false, iconSrc="icons/Action_Cleave_New.png", 75,
+                name="Reaping Swing",
+                costs='1 Action Point, 1 Fury Points',
+                '<span class="damage">Deals: Weapon Damage/2</span><br>Swing your weapon in a large arc to attack multiple enemies at once. They each take half the damage your weapon usually deals.'
+            )
+            // Warrior's Call
+            addSkillSnippet(
+                tier1Div,
+                isNew=false, iconSrc="icons/Skill_GoadProjectile_Merciless.png", 75,
+                name="Warrior's Call",
+                costs='1 Action Point, 1 Fury Points',
+                '<span class="damage">Deals: 2d8 Bludgeoning Damage</span><br>Focus your ire into a brutal shout, dealing <span class="damage">2d8 bludgeoning damage</span> to the target and possibly goading them into attacking you.'
+            )
+            // Thrash
+            addSkillSnippet(
+                tier1Div,
+                isNew=false, iconSrc="icons/Skill_Thrash_Merciless.png", 75,
+                name="Thrash",
+                costs='1 Action Point, 1 Fury Points',
+                '<span class="damage">Deals: Weapon Damage+1d8</span><br>Unleash a powerful assault. Make an attack that deals an additional <span class="damage">1d8 Weapon Damage</span>.'
+            )
+            // Rend
+            addSkillSnippet(
+                tier1Div,
+                isNew=false, iconSrc="icons/Action_CripplingStrike.png", 75,
+                name="Rend",
+                costs='1 Action Point, 1 Fury Points',
+                '<span class="damage">Deals: Weapon Damage</span><br>Strike at a targets limbs, possibly maiming them.'
+            )
+            // Hunker Down
+            addSkillSnippet(
+                tier1Div,
+                isNew=false, iconSrc="icons/Skill_HunkerDown_Merciless.png", 75,
+                name="Hunker Down",
+                costs='1 Action Point, 1 Fury Points',
+                '<span class="damage">Deals: Weapon Damage</span><br>Strike at a targets limbs, possibly maiming them.'
+            )
+            addSpacer('spacer1')
+
+            // ------------Tier 2------------
+            let tier2Div = addTitle("Tier 2 Onslaughts", "tier2onslaught")
+            // Bellowing Roar
+            addSkillSnippet(
+                tier2Div,
+                isNew=false, iconSrc="icons/Skill_GoadCleave_Merciless.png", 75,
+                name="Bellowing Roar",
+                costs='1 Action Point, 2 Fury Points',
+                'Roar with all your might in a large arc to possibly goad multiple enemies at once.'
+            )
+            // Invigorate
+            addSkillSnippet(
+                tier2Div,
+                isNew=false, iconSrc="icons/Skill_CureWounds_Merciless.png", 75,
+                name="Invigorate",
+                costs='1 Bonus Action Point, 2 Fury Points',
+                '<span class="damage">Temporary HP: 1d8 + Constitution Modifier</span><br>Incite courage to yourself or an ally that you can touch, granting them temporary hit points.<br><br style="line-height:0;">If the target is Downed then they will also be helped up with 1 Hit Point.'
+            )
+            // Surging Tremor
+            addSkillSnippet(
+                tier2Div,
+                isNew=false, iconSrc="icons/Skill_SurgingTremor_Merciless.png", 75,
+                name="Surging Tremor",
+                costs='1 Action Point, 2 Fury Points',
+                'Slam the ground to cause a forceful surge, possibly pushing multiple enemies at once.'
+            )
+            // Impaling Retaliation
+            addSkillSnippet(
+                tier2Div,
+                isNew=false, iconSrc="icons/Skill_Thorns_Merciless.png", 75,
+                name="Impaling Retaliation",
+                costs='1 Action Point, 2 Fury Points',
+                'Enforce your skin with thorns, any creature that hits you with a melee attack suffers <span class="damage">1d4 Piercing Damage</span>.'
+            )
+            addSpacer('spacer1')
+
+            // ------------Tier 3------------
+            let tier3Div = addTitle("Tier 3 Onslaughts", "tier3onslaught")
+            // Tectonic Slam
+            addSkillSnippet(
+                tier3Div,
+                isNew=false, iconSrc="icons/Skill_Earthquake_Merciless.png", 75,
+                name="Tectonic Slam",
+                costs='1 Action Point, 3 Fury Points',
+                '<span class="damage">Deals: 6d6 Bludgeoning Damage</span><br>Slam the ground with overwhelming force, causing the earth to erupt dealing <span class="damage">6d6 Bludgeoning Damage</span> to those within the vicinity, possibly knocking them Prone.'
+            )
+            // Earthbound Guard
+            addSkillSnippet(
+                tier3Div,
+                isNew=false, iconSrc="icons/Skill_EarthboundGuard_Merciless.png", 75,
+                name="Earthbound Guard",
+                costs='1 Action Point, 3 Fury Points',
+                '<span class="damage">Temporary HP: 1d8 + Constitution Modifier</span><br>Bolster the defenses of up to 2 allies including yourself. Their Armour Class is increased by 3 and they are granted temporary hit points at the beginning of every turn.<br><br style="line-height:0;">If the target is Downed then they will also be helped up with 1 Hit Point.'
+            )
+            // Daunting Howl
+            addSkillSnippet(
+                tier3Div,
+                isNew=false, iconSrc="icons/Skill_FearShout_Merciless.png", 75,
+                name="Daunting Howl",
+                costs='1 Action Point, 3 Fury Points',
+                '<span class="damage">Deals: 4d4 Piercing Damage</span><br>Let loose with a piercing shout, dealing <span class="damage">4d4 Piercing Damage</span> and possibly Frightening nearby enemies.'
+            )
+        </script>
+    </body>
+</html>

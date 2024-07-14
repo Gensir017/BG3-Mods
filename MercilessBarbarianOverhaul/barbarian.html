@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="divHandler.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <title>Merciless | Barbarian</title>
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+        <script>
+            buildNavbar("Barbarian")
+        </script>
+        <div id="pageContainer">
+            <h1>Notes</h1>
+            <h4 style="background-color: #14302498; padding: 15px 10px 15px 10px; margin-top: 15px;">New additional progression features are highlighted.</h4>
+            <h4 style="padding: 5px 10px 5px 10px;">Modifications/Changes to existing progression features are <span class="baseDeviation">Underlined</span>.</h4>
+            <div class="spacer1"></div>
+        </div>
+
+        <script src="divHandler.js"></script>
+        <script>
+            // ------------Level 1------------
+            let level1Div = addTitle("Barbarian Level 1")
+            // Rage
+            addSkillSnippet(
+                level1Div,
+                isNew=false, iconSrc="icons/Action_Barbarian_Rage.png", 70,
+                name="Rage",
+                costs='<span class="baseDeviation">Use Costs: 1 Rage Charge, <span class="thick-strikethrough">1 Bonus Action Point</span></span>',
+                'Deal 2 extra damage with melee and improvised weapons, and throwing..<br><br style="line-height:0;">You have Resistance to physical damage, and Advantage on Strength Checks and Saving Throws.',
+                ["Available only in combat",
+                "Rage ends early if you don't attack an enemy or take damage each turn",
+                "You can't cast or concentrate on Spells while raging."]
+            )
+            // Fighting Style
+            addNonIntSkillSnippet(
+                level1Div,
+                isNew=true, iconSrc=null, 70,
+                name="Pick a Fighting Style",
+                'Defence - You gain a +1 bonus to Armour Class while wearing Armour.<br><br style="line-height:0;">Protection - When you have a Shield, spend a reaction point to impose Disadvantage on an enemy who attacks one of your allies when you are within 1.5m. You must be able to see the enemy.<br><br style="line-height:0;">Two-Weapon Fighting - When you make an offhand attack, you can add your Ability Modifier to the damage of the attack.<br><br style="line-height:0;">Great Weapon Fighting - When you roll a 1 or 2 on a damage die for an attack with a Two-Handed melee weapon, that die is rerolled once.<br><br style="line-height:0;"><span class="baseDeviation">Concussive Fighting</span> - Once per turn, when you hit a target with a Maul, Warhammer or Light Hammer, you can choose to strike with concussive force, possibly Dazing the target.'
+            )
+            // Rage Charges
+            addNonIntSkillSnippet(
+                level1Div,
+                isNew=false, iconSrc="icons/Rage_Charges_Icons.png", 40,
+                name="Rage Charges: 2",
+                'The number of times you can Rage per day. Fully Replenished by long rest. <span class="baseDeviation">On Short Rest you replenish only 1 Rage Charge</span>.'
+            )
+            // Unarmoured Defence
+            addNonIntSkillSnippet(
+                level1Div,
+                isNew=false, iconSrc="icons/PassiveFeature_UnarmoredDefense_Barbarian.png", 70,
+                name="Unarmoured Defence",
+                'When not wearing armour, add your Constituion modifier to your Armour Class in addition to your Dexterity modifer.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 2------------
+            let level2Div = addTitle("Barbarian Level 2")
+            // Reckless Attack
+            addSkillSnippet(
+                level2Div,
+                isNew=false, iconSrc="icons/Action_Barbarian_RecklessAttack.png", 70,
+                name='Reckless Attack',
+                costs='Use Costs: 1 Action Point',
+                '<span class="damage">Deals: Weapon Damage</span><br>Until your next turn, you have advantage on all attack rolls, but enemies also have advantage on attack rolls against you.'
+            )
+            // Seismic Leap
+            addSkillSnippet(
+                level2Div,
+                isNew=true, iconSrc="icons/Skill_SeismicLeap_Merciless.png", 70,
+                name="Seismic Leap",
+                costs='Use Costs: 1 Fury Point, 3m Movement Speed',
+                '<span class="damage">Deals: 1d4 Bludgeoning Damage</span><br>Leap to a target destination, dealing <span class="damage">1d4 bludgeoning damage</span> to those within 2m of the impact zone.'
+            )
+            // Danger Sense
+            addNonIntSkillSnippet(
+                level2Div,
+                isNew=false, iconSrc="icons/PassiveFeature_DangerSense.png", 70,
+                name="Danger Sense",
+                'You have advantage on Dexterity saves against traps, spells and surfaces while not Blinded or Incapacitated.'
+            )
+            // Fury Points
+            addNonIntSkillSnippet(
+                level2Div,
+                isNew=true, iconSrc="icons/fury_point.png", 50,
+                name="Fury Points: 2",
+                'You can spend these points to fuel various powerful Barbarian abilities. Fully Replenished by long rest.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 3------------
+            let level3Div = addTitle("Barbarian Level 3")
+            // Onslaught choice - TIER 1
+            addOnslaughtSnippet(
+                level3Div,
+                isNew=true, iconSrc="empty_img.png", 70,
+                name="Pick Two Tier 1 Onslaughts",
+                'Click to see the list of available Onslaughts.',
+                'tier1onslaught'
+            )
+            // Fury Points
+            addNonIntSkillSnippet(
+                level3Div,
+                isNew=true, iconSrc="icons/fury_point.png", 50,
+                name="Fury Points: 3",
+                'Gain an additional Fury Point.'
+            )
+
+            addSpacer("spacer1")
+
+            // ------------Level 4------------
+            let level4Div = addTitle("Barbarian Level 4")
+             // Grim Intent
+             addSkillSnippet(
+                level4Div,
+                isNew=true, iconSrc="icons/Skill_GrimIntent_Merciless.png", 70,
+                name="Grim Intent",
+                costs='Use Costs: 1 Bonus Action Point',
+                'Mark a creature as your victim. They suffer Disadvantage on Constitution Saving Throws.<br><br style="line-height:0;">If the marked target dies you replenish 1 Fury Point and starting on your next turn you can use Reapply Grim Intent to mark a new creature for no cost.',
+                ["Can only be used whilst Raging", 'Can only affect one target at a time']
+            )
+            // Feat
+            addNonIntSkillSnippet(
+                level4Div,
+                isNew=false, iconSrc=null, 70,
+                name="Feat",
+                'Choose a new Feat.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 5------------
+            let level5Div = addTitle("Barbarian Level 5")
+            // Onslaught choice - TIER 1
+            addOnslaughtSnippet(
+                level5Div,
+                isNew=true, iconSrc="empty_img.png", 70,
+                name="Pick a Tier 1 Onslaught",
+                'Click to see the list of available Onslaughts.',
+                'tier1onslaught'
+            )
+            // Extra Attack
+            addNonIntSkillSnippet(
+                level5Div,
+                isNew=false, iconSrc="icons/PassiveFeature_ExtraAttack.png", 70,
+                name="Extra Attack",
+                'You can attack twice, instead of once, whenever you take the Attack action on your turn.'
+            )
+            // Fast Movement
+            addNonIntSkillSnippet(
+                level5Div,
+                isNew=false, iconSrc="icons/PassiveFeature_FastMovement.png", 70,
+                name="Fast Movement",
+                'Your movement speed inceases by 3m while not wearing heavy armour.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 6------------
+            let level6Div = addTitle("Barbarian Level 6")
+            // Onslaught choice - tier 2
+            addOnslaughtSnippet(
+                level6Div,
+                isNew=true, iconSrc="empty_img.png", 70,
+                name="Pick a Tier 2 Onslaught",
+                'Click to see the list of available Onslaughts.',
+                'tier2onslaught'
+            )
+            // Grim Torment
+            addNonIntSkillSnippet(
+                level6Div,
+                isNew=true, iconSrc="icons/Passive_GrimTorment.png", 70,
+                name="Grim Torment",
+                'When you hit your target marked by Grim Intent with a melee weapon or unarmed attack you inflict 1 turn of Torment.'
+            )
+            // Fury Points
+            addNonIntSkillSnippet(
+                level6Div,
+                isNew=true, iconSrc="icons/fury_point.png", 50,
+                name="Fury Points: 4",
+                'Gain an additional Fury Point.'
+            )
+
+            addSpacer("spacer1")
+
+            // ------------Level 7------------
+            let level7Div = addTitle("Barbarian Level 7")
+            // Ignore resistances
+            addSkillSnippet(
+                level7Div,
+                isNew=true, iconSrc="icons/Skill_SunderingStrike_Merciless.png", 70,
+                name='Sundering Strike',
+                costs='Use Costs: 1 Action Point, 2 Fury Points',
+                '<span class="damage">Deals: Weapon Damage</span><br>Weaken a targets defenses to cause Sundered, which removes Resistance to Slashing, Bludgeoning and Piercing damage.'
+            )
+            // Feral Instinct
+            addNonIntSkillSnippet(
+                level7Div,
+                isNew=false, iconSrc="icons/PassiveFeature_FeralInstinct.png", 70,
+                name="Feral Instinct",
+                "You have honed your instincts to the utmost degree. You gain a +3 to initiative and can't be Surprised."
+            )
+            // Rage Charges
+            addNonIntSkillSnippet(
+                level7Div,
+                isNew=false, iconSrc="icons/Rage_Charges_Icons.png", 40,
+                name='Rage Charges: 3 - <span class="baseDeviation">Moved to level 7</span>',
+                'Gain an additional Rage Charge.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 8------------
+            let level8Div = addTitle("Barbarian Level 8")
+            // Subsume Elements
+            addSkillSnippet(
+                level8Div,
+                isNew=true, iconSrc="icons/PassiveFeature_SubsumeElements_Merciless.png", 70,
+                name='Subsume Elements',
+                costs='Use Costs: 1 Reaction Point, 2 Fury Points',
+                'Absorb either <span class="acid">Acid</span>, <span class="cold">Cold</span>, <span class="fire">Fire</span>, <span class="lightning">Lightning</span> or <span class="thunder">Thunder</span> damage from a spell that hits you to imbue your <span class="bold">Melee Weapon</span> and <span class="bold">Unarmed</span> attacks for an additional<span class="damage"> 1d4 damage</span> of that same element.<br><br style="line-height:0;">You also <span class="restoreHP">Restore Hitpoints</span> equal to half your Barbarian Level.'
+            )
+            // Feat
+            addNonIntSkillSnippet(
+                level8Div,
+                isNew=false, iconSrc=null, 70,
+                name="Feat",
+                'Choose a new Feat.'
+            )
+
+            addSpacer("spacer1")
+
+            // ------------Level 9------------
+            let level9Div = addTitle("Barbarian Level 9")
+            // Onslaught choice - tier 2
+            addOnslaughtSnippet(
+                level9Div,
+                isNew=true, iconSrc="empty_img.png", 70,
+                name="Pick a Tier 2 Onslaught",
+                'Click to see the list of available Onslaughts.',
+                'tier2onslaught'
+            )
+            // Grim Focus
+            addNonIntSkillSnippet(
+                level9Div,
+                isNew=true, iconSrc=null, 70,
+                name="Pick a Grim Focus",
+                'Weave Hunter - Targets affected by your Grim Intent recieve a -2 penalty to spell Attack Rolls.<br><br style="line-height:0;">Brute Breaker - Targets affected by your Grim Intent recieve a -2 penalty to Melee Weapon and Unarmed Attack Rolls.'
+            )
+            // Brutal Critical
+            addNonIntSkillSnippet(
+                level9Div,
+                isNew=false, iconSrc="icons/PassiveFeature_BrutalCritical.png", 70,
+                name="Brutal Critical",
+                'When you land a critical hit, you roll an extra damage die as well as the normal additional critical die.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 10------------
+            let level10Div = addTitle("Barbarian Level 10")
+            // Onslaught choice - tier 3
+            addOnslaughtSnippet(
+                level10Div,
+                isNew=true, iconSrc="empty_img.png", 70,
+                name="Pick a Tier 3 Onslaught",
+                'Click to see the list of available Onslaughts.',
+                'tier3onslaught'
+            )
+            // Fury Points
+            addNonIntSkillSnippet(
+                level10Div,
+                isNew=true, iconSrc="icons/fury_point.png", 50,
+                name="Fury Points: 5",
+                'Gain an additional Fury Point.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 11------------
+            let level11Div = addTitle("Barbarian Level 11")
+            // Extra Attack
+            addSkillSnippet(
+                level11Div,
+                isNew=true, iconSrc="icons/Skill_RelentlessFury_Merciless.png", 70,
+                name='Relentless Fury',
+                costs='Use Costs: 3 Fury Points',
+                '<span class="damage">Deals: Weapon Damage</span><br>Make a melee attack with your equipped weapon which consumes Fury Points but does not cost an Action Point.'
+            )
+            addNonIntSkillSnippet(
+                level11Div,
+                isNew=false, iconSrc="icons/PassiveFeature_RelentlessRage.png", 70,
+                name="Relentless Rage",
+                'Once per short rest, if you drop to 0 hit points while Enraged, you regain 1 hit point instead of being Downed.'
+            )
+        
+            addSpacer("spacer1")
+
+            // ------------Level 12------------
+            let level12Div = addTitle("Barbarian Level 12")
+            // Feat
+            addNonIntSkillSnippet(
+                level12Div,
+                isNew=false, iconSrc=null, 70,
+                name="Feat",
+                'Choose a new Feat.'
+            )
+            // Fury Points
+            addNonIntSkillSnippet(
+                level12Div,
+                isNew=true, iconSrc="icons/fury_point.png", 50,
+                name="Fury Points: 6",
+                'Gain an additional Fury Point.'
+            )
+        </script>
+    </body>
+</html>

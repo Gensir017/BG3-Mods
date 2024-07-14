@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="divHandler.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <title>Merciless | Berserker</title>
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+        <script>
+            buildNavbar("Berserker")
+        </script>
+        <div id="pageContainer">
+            <h1>Notes</h1>
+            <h4 style="background-color: #14302498; padding: 15px 10px 15px 10px; margin-top: 15px;">New additional progression features are highlighted.</h4>
+            <h4 style="padding: 5px 10px 5px 10px;">Modifications/Changes to existing progression features are <span class="baseDeviation">Underlined</span>.</h4>
+            <div class="spacer1"></div>
+        </div>
+
+        <script src="divHandler.js"></script>
+        <script>
+            // ------------Level 3------------
+            let level3Div = addTitle("Berserker Level 3")
+            // Frenzied Strike
+            addSkillSnippet(
+                level3Div,
+                isNew=false, iconSrc="icons/Action_Barbarian_FrenziedStrike.png", 70,
+                name="Frenzied Strike",
+                costs='Use Costs: 1 Bonus Action Point',
+                'As a bonus action, make a melee attack with your equipped weapon.<br><br style="line-height:0;"><span class="baseDeviation">You take 1d4 damage from recoil.<br><span class="thick-strikethrough">Will cause a stack of Frenzied Strain on the barbarian.</span></span>',
+            )
+            // Enraged Throw
+            addSkillSnippet(
+                level3Div,
+                isNew=false, iconSrc="icons/Action_Barbarian_FrenziedThrow.png", 70,
+                name="Enraged Throw",
+                costs='Use Costs: 1 Bonus Action Point',
+                'Pick up an item or creature and throw it at a target, dealing additional damage and knocking it Prone.<br><br style="line-height:0;"><span class="baseDeviation">You take 1d4 damage from recoil.</span>',
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 6------------
+            let level6Div = addTitle("Berserker Level 6")
+            // Mindless Rage
+            addNonIntSkillSnippet(
+                level6Div,
+                isNew=false, iconSrc="icons/PassiveFeature_MindlessRage.png", 70,
+                name="Mindless Rage",
+                "While Frenzied Frenzied, you can't be Charmed or Frightened, and Calm Emotions no longer ends your rage."
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 10------------
+            let level10Div = addTitle("Berserker Level 10")
+            // Intimidating Presence
+            addSkillSnippet(
+                level10Div,
+                isNew=false, iconSrc="icons/Action_IntimidatingPresence.png", 70,
+                name="Frenzied Strike",
+                costs='Use Costs: 1 Bonus Action Point',
+                "Menace an enemy and instill a terrible Fear within them. If the target resists the effect, it can't be targeted again until after a Long Rest.<br><br style='line-height:0;'>On subsequent turns, you can use Maintain Intimidating Presence to prolong the target's fear.",
+            )
+        </script>
+    </body>
+</html>

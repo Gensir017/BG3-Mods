@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="divHandler.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <title>Merciless | Wildheart</title>
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+        <script>
+            buildNavbar("Wildheart")
+        </script>
+        <div id="pageContainer">
+            <h1>Notes</h1>
+            <h4 style="background-color: #14302498; padding: 15px 10px 15px 10px; margin-top: 15px;">New additional progression features are highlighted.</h4>
+            <h4 style="padding: 5px 10px 5px 10px;">Modifications/Changes to existing progression features are <span class="baseDeviation">Underlined</span>.</h4>
+            <div class="spacer1"></div>
+        </div>
+
+        <script src="divHandler.js"></script>
+        <script>
+            // ------------Level 3------------
+            let level3Div = addTitle("Wildheart Level 3")
+            // Speak with Animals
+            addSkillSnippet(
+                level3Div,
+                isNew=false, iconSrc="icons/Spell_Divination_SpeakWithAnimals.png", 70,
+                name="Speak with Animals",
+                costs='Use Costs: 1 Action Point',
+                'You can use the 1st Level Spell Speak with Animals without expending spell slots.',
+            )
+
+            // Speak with Animals
+            addNonIntSkillSnippet(
+                level3Div,
+                isNew=false, iconSrc=null, 70,
+                name="Bestial Heart",
+                'Choose a Bestial Heart. From here on out, every time you gain a level in Barbarian, you may replace your current Bestial Heart with a different one as an optional choice.',
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 6------------
+            let level6Div = addTitle("Wildheart Level 6")
+            // Animal Aspect
+            addNonIntSkillSnippet(
+                level6Div,
+                isNew=false, iconSrc=null, 70,
+                name="Animal Aspect",
+                'Choose an Aspect of the Beast.'
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 8------------
+            let level8Div = addTitle("Wildheart Level 8")
+            // Land's Stride: Difficult Terrain
+            addNonIntSkillSnippet(
+                level8Div,
+                isNew=false, iconSrc="icons/PassiveFeature_LandsStride_DifficultTerrain.png", 70,
+                name="Land's Stride: Difficult Terrain",
+                'You have become an expert at moving through the wilderness. Difficult Terrain no longer slows you down.',
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 10------------
+            let level10Div = addTitle("Wildheart Level 10")
+            // Animal Aspect
+            addNonIntSkillSnippet(
+                level10Div,
+                isNew=false, iconSrc=null, 70,
+                name="Animal Aspect",
+                'You may select an additional Aspect of the Beast to benefit from, in addition to your current Animal Aspect. ',
+            )
+        </script>
+    </body>
+</html>

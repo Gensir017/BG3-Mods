@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="divHandler.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <title>Merciless | Wild Magic</title>
+    </head>
+    <body>
+        <script src="navbar.js"></script>
+        <script>
+            buildNavbar("Wild Magic")
+        </script>
+        <div id="pageContainer">
+            <h1>Notes</h1>
+            <h4 style="background-color: #14302498; padding: 15px 10px 15px 10px; margin-top: 15px;">New additional progression features are highlighted.</h4>
+            <h4 style="padding: 5px 10px 5px 10px;">Modifications/Changes to existing progression features are <span class="baseDeviation">Underlined</span>.</h4>
+            <div class="spacer1"></div>
+        </div>
+
+        <script src="divHandler.js"></script>
+        <script>
+            // ------------Level 3------------
+            let level3Div = addTitle("Wild Magic Level 3")
+            // Magic Awareness
+            addSkillSnippet(
+                level3Div,
+                isNew=false, iconSrc="icons/Action_Barbarian_MagicAwareness.png", 70,
+                name="Magic Awareness",
+                costs='Use Costs: 1 Bonus Action Point',
+                'Anyone within a 3m range adds their Proficiency Bonus to Saving Throws against spells.',
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 6------------
+            let level6Div = addTitle("Wild Magic Level 6")
+            // Bolstering Magic: Boon
+            addSkillSnippet(
+                level6Div,
+                isNew=false, iconSrc="icons/Action_BolsteringMagic_Boost.png", 70,
+                name="Bolstering Magic: Boon",
+                costs='Use Costs: 1 Action Point',
+                'You or an ally receive +1d4 bonus to Attack Rolls and Ability Checks for 10 turns.<br><br style="line-height:0;"><span class="baseDeviation">Recharges on Short Rest. <span class="thick-strikethrough">Recharges on Long Rest.</span></span>',
+            )
+            // Bolstering Magic: Level 1 Spell Slot
+            addSkillSnippet(
+                level6Div,
+                isNew=false, iconSrc="icons/Action_BolsteringMagic_Boost_1.png", 70,
+                name="Bolstering Magic: Level 1 Spell Slot",
+                costs='Use Costs: 1 Action Point',
+                'You or an ally recover a level 1 Spell Slot.<br><br style="line-height:0;"><span class="baseDeviation">Recharges on Short Rest. <span class="thick-strikethrough">Recharges on Long Rest.</span></span>',
+            )
+            // Bolstering Magic: Level 2 Spell Slot
+            addSkillSnippet(
+                level6Div,
+                isNew=false, iconSrc="icons/Action_BolsteringMagic_Boost_2.png", 70,
+                name="Bolstering Magic: Level 2 Spell Slot",
+                costs='Use Costs: 1 Action Point',
+                'You or an ally recover a level 2 Spell Slot.<br><br style="line-height:0;"><span class="baseDeviation">Recharges on Short Rest. <span class="thick-strikethrough">Recharges on Long Rest.</span></span>',
+            )
+            addSpacer("spacer1")
+            
+            // ------------Level 9------------
+            let level9Div = addTitle("Wild Magic Level 9")
+            // Bolstering Magic: Level 3 Spell Slot
+            addSkillSnippet(
+                level9Div,
+                isNew=false, iconSrc="icons/Action_BolsteringMagic_Boost_3.png", 70,
+                name="Bolstering Magic: Level 3 Spell Slot",
+                costs='Use Costs: 1 Action Point',
+                'You or an ally recover a level 3 Spell Slot.<br><br style="line-height:0;"><span class="baseDeviation">Recharges on Short Rest. <span class="thick-strikethrough">Recharges on Long Rest.</span></span>',
+            )
+            addSpacer("spacer1")
+
+            // ------------Level 10------------
+            let level10Div = addTitle("Wild Magic Level 10")
+            // Unstable Backlash
+            addSkillSnippet(
+                level10Div,
+                isNew=false, iconSrc="icons/PassiveFeature_Generic_Magical.png", 70,
+                name="Unstable Backlash",
+                costs='Use Costs: 1 Reaction Action Point',
+                'While enraged, when you take damage or fail a Saving Throw, you trigger another Wild Magic effect that replaces the current one. (This counts as a reaction and can be set to ask.)',
+            )
+        </script>
+    </body>
+</html>
