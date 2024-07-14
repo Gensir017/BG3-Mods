@@ -13,9 +13,11 @@
             buildNavbar("Berserker")
             const fixedDiv = document.getElementById('navbar');
 
-            window.addEventListener('scroll', () => {
-                fixedDiv.style.left = -window.scrollX + 'px';
-            });
+            const handleScroll = () => {
+                fixedDiv.style.transform = `translateX(-${window.scrollX}px)`;
+            };
+
+            window.addEventListener('scroll', handleScroll);
         </script>
         <div id="pageContainer">
             <h1>Notes</h1>

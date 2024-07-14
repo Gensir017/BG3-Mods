@@ -13,9 +13,11 @@
             buildNavbar("Home")
             const fixedDiv = document.getElementById('navbar');
 
-            window.addEventListener('scroll', () => {
-                fixedDiv.style.left = -window.scrollX + 'px';
-            });
+            const handleScroll = () => {
+                fixedDiv.style.transform = `translateX(-${window.scrollX}px)`;
+            };
+
+            window.addEventListener('scroll', handleScroll);
         </script>
         <div id="pageContainer">
             <h1>Merciless Barbarian Overhaul</h1>
@@ -63,6 +65,10 @@
                 let wildheartTitle = document.createElement("h5")
                 wildheartTitle.textContent = "Wildheart"
                 wildheartDiv.appendChild(wildheartTitle)
+
+                wildheartDiv.addEventListener('click', function() {
+                    window.location.href = "wildheart.html"
+                });
                 
                 // Berserker
                 let berserkerDiv = document.createElement("div")
@@ -78,6 +84,10 @@
                 berserkerTitle.textContent = "Berserker"
                 berserkerDiv.appendChild(berserkerTitle)
 
+                berserkerDiv.addEventListener('click', function() {
+                    window.location.href = "berserker.html"
+                });
+
                 // Wild Magic
                 let wildmagicDiv = document.createElement("div")
                 wildmagicDiv.className = "subclassDiv"
@@ -91,6 +101,10 @@
                 let wildmagicTitle = document.createElement("h5")
                 wildmagicTitle.textContent = "Wild Magic"
                 wildmagicDiv.appendChild(wildmagicTitle)
+
+                wildmagicDiv.addEventListener('click', function() {
+                    window.location.href = "wildmagic.html"
+                });
             }
 
             addSubclassSnippet()
