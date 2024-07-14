@@ -1,6 +1,7 @@
 function buildNavbar(highlighted){
     let navbarDiv = document.createElement("div")
     navbarDiv.className = "navbar"
+    navbarDiv.id = "navbar"
 
     let navbarIcon = document.createElement("img")
     navbarIcon.src = "icons/Class_Barbarian_Badge_Icon.png"

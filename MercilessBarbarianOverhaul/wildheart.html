@@ -11,6 +11,11 @@
         <script src="navbar.js"></script>
         <script>
             buildNavbar("Wildheart")
+            const fixedDiv = document.getElementById('navbar');
+
+            window.addEventListener('scroll', () => {
+                fixedDiv.style.left = -window.scrollX + 'px';
+            });
         </script>
         <div id="pageContainer">
             <h1>Notes</h1>

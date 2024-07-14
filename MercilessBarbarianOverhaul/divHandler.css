@@ -34,10 +34,11 @@ p{
     width: calc(80% - 60px);
     position: relative;
     padding: 20px;
-    left: 20%;
+    left: calc(250px);
     border: 1px solid #30363d;
     margin-top: 40px;
     margin-bottom: 40px;
+    min-width: 600px;
 }
 .spacer1{
     height: 30px;
